@@ -1,0 +1,92 @@
+
+.blurcircle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    filter: blur(10px);
+  }
+
+.image{
+  width: 572px;
+  height: 200px;
+  
+}
+.slider{
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 100px 0 40px 0;
+}
+.myslider{
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+
+.slidetrack {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll1 20s linear infinite;
+}
+
+.slidetrack{
+  display: flex;
+  align-items: center;
+  perspective: 100px;
+  margin: 0 60px;
+
+}
+
+
+.myslider::before,
+.myslider::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.myslider::before {
+  left: 0;
+  top: 0;
+}
+
+.myslider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slidetrack {
+  display: flex;
+  width: calc(250px * 18);
+  animation: scroll1 20s linear infinite;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.slidetrack .myslide {
+  display: flex;
+  align-items: center;
+  perspective: 100px;
+  margin: 0 60px;
+}
+
+
+
+
+
